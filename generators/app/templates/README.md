@@ -6,7 +6,12 @@ ES6 + React + Redux + Webpack Project Generator
 -   node.js
 -   npm
 
-# Knowledages Preparation
+# Start
+-   Yeoman  npm install -g yo
+-   generator npm install generator-react-demo -g
+-   generator yo react-xxx
+
+# knowledge Preparation
 -   ECAMScript 6
 -   React.js
 -   Redux.js
@@ -15,7 +20,7 @@ ES6 + React + Redux + Webpack Project Generator
 -   Antd (UI Component)
 
 # Author
--   [Likui Hu](hulikui@gmail.com)
+-   [Likui Hu](hullikui@gmail.com)
 
 # Version
 -   v1.0.0
