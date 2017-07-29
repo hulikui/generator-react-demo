@@ -1,0 +1,64 @@
+@import "../../node_modules/antd/lib/style/themes/default.less";
+@import "../../node_modules/antd/lib/style/core/index.less";
+@import "../../node_modules/antd/lib/style/components.less";
+
+/* line below is for fis3 to force replace @icon-url variable in antd/lib/style/themes/default.less */
+@icon-url-force-fix: "anticon/iconfont";
+
+/* overrides less variables of antd below */
+
+// Color
+@primary-color          : #108ee9;
+@info-color             : #666666;
+@success-color          : #81B536;
+@error-color            : #FF6F80;
+@highlight-color        : @error-color;
+@warning-color          : #F5A623;
+
+// ------ Base & Require ------
+@font-family            : "Microsoft YaHei", SimSun, sans-serif;
+@text-color             : #4a4a4a;
+@border-radius-base     : 2px;
+@border-radius-sm       : 0px;
+
+// LINK
+@link-color             : #108ee9;
+
+// Border color
+@border-color-base      : #D6D6D6;
+@border-color-split     : #B8B8B8;
+
+// Shadow
+@shadow-color           : rgba(100, 100, 100, .2);
+@shadow-2               : 0 1px 8px @shadow-color;
+
+// Buttons
+@btn-default-bg         : #f7f7f7;
+@btn-disable-bg         : #EDEDF0;
+@btn-font-size-lg       : 14px;
+@btn-padding-lg         : 3px 15px 4px 15px;
+
+// Label
+@label-color                 : #999999;
+
+// Input
+@input-color                 : #4a4a4a;
+@input-disabled-bg           : #81B536;
+
+.ant-modal {
+    padding-bottom: 0;
+}
+.ant-btn-danger {
+    color: #fff;
+    background-color: #F04134;
+    border-color: #F04134;
+    &:hover {
+        color: #fff;
+        background-color: #F04134;
+        border-color: #F04134;
+    }
+}
+.ant-select-dropdown {
+    max-height: 300px;
+    overflow-y: auto;
+}
