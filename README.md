@@ -6,6 +6,11 @@ ES6 + React + Redux + Webpack Project Generator
 -   node.js
 -   npm
 
+# Satrt
+-   Yeoman  npm install -g yo
+-   generator npm install generator-react-demo -g
+-   generator yo react-xxx
+
 # Knowledages Preparation
 -   ECAMScript 6
 -   React.js

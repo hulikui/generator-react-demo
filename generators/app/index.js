@@ -22,6 +22,7 @@ module.exports = class extends Generator {
 
     // 获取 projectName，使用路径尾.
     this.projectName = path.basename(process.cwd());
+    this.projectPath = process.cwd() + '/' + this. projectName;
     // 设置 Author.
     this.appAuthor = "Likui Hu";
   }
@@ -57,7 +58,7 @@ module.exports = class extends Generator {
 
     // 写入 package.json.
     console.log('Setting package.json: ', packageSettings);
-    this.fs.writeJSON(this.destinationPath('package.json'), packageSettings);
+    this.fs.writeJSON(this.destinationPath(this.projectPath, '/package.json'), packageSettings);
   }
 
   /**
@@ -66,7 +67,7 @@ module.exports = class extends Generator {
   writing() {
 
     const projectName = this.projectName;
-    const projectPath = process.cwd() + '/' + projectName;
+    const projectPath = this.projectPath;
 
     if(projectName) {
       fs.mkdirSync(`${projectName}`);
@@ -80,30 +81,31 @@ module.exports = class extends Generator {
       this.templatePath("src"),
       this.destinationPath(projectPath,"/src")
     );
-    console.log('-------copy react-component--------');
+
     this.fs.copy(
       this.templatePath("mock"),
       this.destinationPath(projectPath,"/mock")
     );
-    console.log('-------copy node mock frame--------');
+
     this.fs.copy(
       this.templatePath("build"),
       this.destinationPath(projectPath,"/build")
     );
-    console.log('-------copy webpack config--------');
+
     this.fs.copy(
       this.templatePath(".gitignore"),
       this.destinationPath(projectPath,"/.gitignore")
     );
+
     this.fs.copy(
       this.templatePath(".babelrc"),
       this.destinationPath(projectPath,"/.babelrc")
     );
+
     this.fs.copy(
       this.templatePath("README.md"),
       this.destinationPath(projectPath,"/README.md")
     );
-
 
   }
 
